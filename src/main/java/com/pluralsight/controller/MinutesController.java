@@ -13,7 +13,7 @@ public class MinutesController {
 	public String addMinutes(@ModelAttribute ("exercise") Exercise exercise)
 	{
 		System.out.println("exercise " + exercise.getMinutes());
-		return "addeMinutes";
+		return "addMinutes";
 		//we can use redirect: also in order to redirect instead of forward
 		//return "forward:addMoreMinutes.html";
 		//return "redirect:addMoreMinutes.html";

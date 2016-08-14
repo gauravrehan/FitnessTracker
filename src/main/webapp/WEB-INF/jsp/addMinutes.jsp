@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>    
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,11 +12,13 @@
 </head>
 <body>
 
+Language: <a href="?Language=en">English</a> | <a href="?Language=es">Spanish</a>
+
 <h1>Add minutes exercised!</h1>
 <form:form commandName="exercise">
 	<table>
 		<tr>
-			<td>Minutes exercise for Today:</td>
+			<td><spring:message code="goal.text"></spring:message></td>
 			<td><form:input path="minutes"/></td>
 		</tr>
 		<tr>
@@ -25,5 +28,6 @@
 		</tr>	
 	</table>
 </form:form> 
+<h1>Our goal for the day is ${goal.minutes}</h1>
 </body>
 </html>
